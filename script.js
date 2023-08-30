@@ -24,7 +24,7 @@ function displayStudents(students) {
     });
 }
 
-// Attach event listener to a static parent element to handle dynamic "Edit" button clicks
+// Attach event listener to "Edit" button
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('edit-btn')) {
         handleEdit(event);
@@ -34,12 +34,10 @@ document.addEventListener('click', function(event) {
 // Handle edit button click
 function handleEdit(event) {
     const studentId = event.target.getAttribute('data-id');
-    console.log(studentId);
     const students = JSON.parse(localStorage.getItem('students'));
 
     // Find the student by ID
     const studentIndex = students.findIndex(s => s.name === studentId);
-    console.log(studentIndex);
     if (studentIndex !== -1) {
         const student = students[studentIndex];
 
