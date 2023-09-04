@@ -17,17 +17,23 @@ function displayStudents(students) {
   const tableBody = document.querySelector("#student-table tbody");
   tableBody.innerHTML = "";
 
-  students.forEach((student) => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
+  if (students.length === 0) {
+    document.querySelector(".no-Data").style.display = "block";
+    localStorage.removeItem("students");
+  } else {
+    document.querySelector(".no-Data").style.display = "none";
+    students.forEach((student) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
             <td>${student.name}</td>
             <td>${student.age}</td>
             <td>${student.grade}</td>
             <td><span class="edit-btn" data-id="${student.name}">Edit</span></td>
             <td><span class="delete-btn" data-id="${student.name}">Delete</span></td>
         `;
-    tableBody.appendChild(row);
-  });
+      tableBody.appendChild(row);
+    });
+  }
 }
 
 // Attach event listener to "Edit" button and "Delete" button
@@ -109,5 +115,5 @@ function handleClearList() {
   students.splice(0, students.length);
   localStorage.setItem("students", JSON.stringify(students));
   displayStudents(students);
-  localStorage.removeItem('students');
+  localStorage.removeItem("students");
 }

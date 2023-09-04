@@ -49,3 +49,8 @@ th {
     height: 30px;
 }
 
+.no-Data{
+    width:700px;
+    display: none;
+}
+
