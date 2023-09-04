@@ -96,3 +96,10 @@ function handleDelete(event) {
         displayStudents(students);
     }
 }
+
+function handleClearList(){
+    let students = JSON.parse(localStorage.getItem('students'));
+    students.splice(0, students.length);
+    localStorage.setItem('students', JSON.stringify(students));
+    displayStudents(students);
+}
