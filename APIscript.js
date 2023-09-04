@@ -25,12 +25,15 @@ function displayStudents(students) {
     });
 }
 
-// Attach event listener to "Edit" button
+// Attach event listener to "Edit" button and "Delete" button
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('edit-btn')) {
         handleEdit(event);
     }
+    else if(event.target.classList.contains('delete-btn')) {
+        handleDelete(event); }
 });
+
 
 // Handle edit button click
 function handleEdit(event) {
@@ -76,5 +79,20 @@ function handleEdit(event) {
         cancelButton.addEventListener('click', () => {
             displayStudents(students);
         });
+    }
+}
+
+// Handle delete button click
+function handleDelete(event) {
+    const studentId = event.target.getAttribute('data-id');
+    let students = JSON.parse(localStorage.getItem('students'));
+
+    // Find the student by ID
+    const studentIndex = students.findIndex(student => student.name === studentId);
+
+    if (studentIndex !== -1) {
+        students.splice(studentIndex, 1);
+        localStorage.setItem('students', JSON.stringify(students));
+        displayStudents(students);
     }
 }
