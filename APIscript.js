@@ -97,6 +97,7 @@ function handleDelete(event) {
     }
 }
 
+// Handle clearList button click
 function handleClearList(){
     let students = JSON.parse(localStorage.getItem('students'));
     students.splice(0, students.length);
