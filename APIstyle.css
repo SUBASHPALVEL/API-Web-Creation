@@ -34,3 +34,9 @@ th {
     color: blue;
     text-decoration: underline;
 }
+
+.delete-btn {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
+}

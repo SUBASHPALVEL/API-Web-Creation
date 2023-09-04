@@ -19,6 +19,7 @@ function displayStudents(students) {
             <td>${student.age}</td>
             <td>${student.grade}</td>
             <td><span class="edit-btn" data-id="${student.name}">Edit</span></td>
+            <td><span class="delete-btn" data-id="${student.name}">Delete</span></td>
         `;
         tableBody.appendChild(row);
     });
