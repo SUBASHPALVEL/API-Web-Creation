@@ -40,3 +40,11 @@ th {
     color: red;
     text-decoration: underline;
 }
+
+.clearListButton{
+    color:white;
+    background-color: red;
+    float:right;
+    width: 150px;
+    height: 30px;
+}
