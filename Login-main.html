@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UI Training</title>
+    <link rel="stylesheet" href="LoginStyle.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left-div">
+        <form onclick="gettingElement(event)" id="loginForm">
+          <h1>Welcome back</h1>
+
+          <p>Welcome back! please enter your details</p>
+          <label for="Email">Email</label><br />
+          <input
+            type="text"
+            id="Email"
+            name="Email"
+            size="40"
+            placeholder="Enter your email"
+          /><br />
+          <br />
+          <div class="error" id="emailError"></div>
+
+          <label for="Password">Password</label><br />
+          <input
+            type="password"
+            id="Password"
+            name="Password"
+            size="40"
+            placeholder="Enter your password"
+          /><br /><br />
+          <div class="error" id="passwordError"></div>
+
+          <input
+            type="checkbox"
+            id="passwordRemember"
+            name="passwordRemember"
+            value="passwordRemember"
+          />
+          <label for="passwordRemember">Remember for 30 days</label>
+          <a href="" style="padding-left: 30px">Forgot Password</a><br />
+          <br />
+
+          <button id="submitButton">Login</button>
+
+          <br />
+          <br />
+          <button type="button" class="googleLogin">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+              alt="Google icon"
+            />
+            Sign in with Google</button
+          ><br />
+          <br />
+
+          <label for="noAccount" style="padding-left: 35px"
+            >Don't have an account</label
+          >
+          <a href="">Sign up</a>
+        </form>
+      </div>
+      <div class="right-div">
+        <div class="circle-image">
+          <img src="image.jpg" alt="Image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+      <p>Login successful!</p>
+    </div>
+
+    <div class="failure-message" id="failureMessage">
+      <p>Login Failed!</p>
+    </div>
+
+    <script src="LoginScript.js"></script>
+  </body>
+</html>
