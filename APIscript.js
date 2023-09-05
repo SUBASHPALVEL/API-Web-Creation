@@ -45,6 +45,9 @@ function displayStudents(students) {
       tableBody.appendChild(row);
     });
   }
+
+  const totalEntriesSpan = document.getElementById("totalEntries");
+  totalEntriesSpan.textContent = `Total Entries: ${students.length}`;
 }
 
 // Attach event listener to "Edit" button and "Delete" button
