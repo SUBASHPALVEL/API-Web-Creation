@@ -17,7 +17,7 @@ function displayStudents(students) {
   const tableBody = document.querySelector("#student-table tbody");
   tableBody.innerHTML = "";
 
-  if (students.length === 0) {
+  if (students.length == 0) {
     document.querySelector(".no-Data").style.display = "block";
     localStorage.removeItem("students");
   } else {

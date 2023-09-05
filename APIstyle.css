@@ -56,3 +56,14 @@ th {
     display: none;
 }
 
+.appendListButton{
+    color:white;
+    background-color: red;
+    float:right;
+    width: 150px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+
+
