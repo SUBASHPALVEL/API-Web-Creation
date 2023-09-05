@@ -6,7 +6,7 @@ body {
 
 .container {
   max-width: 100%;
-  min-height:535px;
+  min-height: 535px;
   margin: 1rem;
   padding: 1rem;
   border: 0.0625rem solid #ccc;
@@ -68,8 +68,6 @@ th {
   padding: 63.5px;
 }
 
-
-
 .refreshIcon {
   float: right;
   margin-right: 10px;
@@ -97,9 +95,9 @@ th {
 }
 
 .table-container {
-  max-height: 415px; 
-  overflow-y: auto; 
-  border: 1px solid #ccc; 
+  max-height: 415px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
 }
 
 #student-table thead {

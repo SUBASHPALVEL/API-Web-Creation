@@ -75,7 +75,7 @@ function checkCredentials(email, password) {
     if (user.email === email && user.password === password) {
       showFor4SecondsForSuccess();
       resetForm();
-      window.location.href="APImain.html";
+      window.location.href="../API/APImain.html";
 
       return;
     } else {

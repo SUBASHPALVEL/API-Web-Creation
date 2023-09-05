@@ -63,8 +63,6 @@ document.addEventListener("click", function (event) {
 function handleEdit(event) {
   const studentId = event.target.getAttribute("data-id");
   const students = JSON.parse(localStorage.getItem("students"));
-
-  // Find the student by ID
   const studentIndex = students.findIndex((s) => s.name === studentId);
   if (studentIndex !== -1) {
     const student = students[studentIndex];
@@ -110,8 +108,6 @@ function handleEdit(event) {
 function handleDelete(event) {
   const studentId = event.target.getAttribute("data-id");
   let students = JSON.parse(localStorage.getItem("students"));
-
-  // Find the student by ID
   const studentIndex = students.findIndex(
     (student) => student.name === studentId
   );
@@ -134,10 +130,9 @@ function handleClearList() {
 
 // Handle AppendData button click
 function handleAppendData() {
-  // Start the rotation animation
   const refreshIcon = document.getElementById("refreshIcon");
   refreshIcon.style.display = "block";
-  refreshIcon.style.animation = "spin 2s linear infinite"; // Adjust the duration and timing function as needed
+  refreshIcon.style.animation = "spin 2s linear infinite";
 
   fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
     .then((response) => response.json())
@@ -147,14 +142,17 @@ function handleAppendData() {
       localStorage.setItem("students", JSON.stringify(students));
       displayStudents(students);
 
-      // Stop the rotation animation once data is appended
       refreshIcon.style.animation = "none";
       refreshIcon.style.display = "none";
     })
     .catch((error) => {
       console.error("Error appending data:", error);
-      // Stop the rotation animation on error as well
       refreshIcon.style.animation = "none";
       refreshIcon.style.display = "none";
     });
+}
+
+// Handle logout button click
+function handleLogout(){
+  window.location.href="../Login/Loginmain.html";
 }
