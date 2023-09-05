@@ -46,8 +46,8 @@ function displayStudents(students) {
     });
   }
 
-  const totalEntriesSpan = document.getElementById("totalEntries");
-  totalEntriesSpan.textContent = `Total Entries: ${students.length}`;
+  const totalEntries = document.getElementById("totalEntries");
+  totalEntries.textContent = `Total Entries: ${students.length}`;
 }
 
 // Attach event listener to "Edit" button and "Delete" button
