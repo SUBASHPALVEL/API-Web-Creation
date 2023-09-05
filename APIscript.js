@@ -117,3 +117,16 @@ function handleClearList() {
   displayStudents(students);
   localStorage.removeItem("students");
 }
+
+// Handle AppendData button click
+function handleAppendData() {
+  fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
+    .then((response) => response.json())
+    .then((newData) => {
+      let students = JSON.parse(localStorage.getItem("students")) || [];
+      students = students.concat(newData);
+      localStorage.setItem("students", JSON.stringify(students));
+      displayStudents(students);
+    })
+    .catch((error) => console.error("Error appending data:", error));
+}

@@ -9,7 +9,8 @@
     <div class="container">
         <h1>Student Dashboard
             <button type="button" class="clearListButton" onclick="handleClearList()" >Clear List</button>
-            <button type="button" class="appendListButton" onclick="" >Append List</button>
+            <button type="button" class="appendListButton" onclick="handleAppendData()" >Append List</button>
+            <img src="Images/refresh.png" alt="Refresh Icon" class="refreshIcon"></img>
         </h1>
         <table id="student-table">
             <thead>
@@ -25,7 +26,7 @@
                 <!-- For dynamic contents -->
             </tbody>
         </table>
-        <img src="NoData.jpg" alt="No Data" class="no-Data">
+        <img src="Images/NoData.jpg" alt="No Data" class="no-Data">
     </div>
     <script src="APIscript.js"></script>
 </body>
