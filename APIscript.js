@@ -136,6 +136,7 @@ function handleClearList() {
 function handleAppendData() {
   // Start the rotation animation
   const refreshIcon = document.getElementById("refreshIcon");
+  refreshIcon.style.display = "block";
   refreshIcon.style.animation = "spin 2s linear infinite"; // Adjust the duration and timing function as needed
 
   fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
@@ -148,10 +149,12 @@ function handleAppendData() {
 
       // Stop the rotation animation once data is appended
       refreshIcon.style.animation = "none";
+      refreshIcon.style.display = "none";
     })
     .catch((error) => {
       console.error("Error appending data:", error);
       // Stop the rotation animation on error as well
       refreshIcon.style.animation = "none";
+      refreshIcon.style.display = "none";
     });
 }
