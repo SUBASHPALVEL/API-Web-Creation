@@ -7,12 +7,15 @@
 </head>
 <body>
     <div class="container">
+        <div class="funtionalitiesContainer">
         <h1>Student Dashboard
             <button type="button" class="clearListButton" onclick="handleClearList()" >Clear List</button>
             <button type="button" class="appendListButton" onclick="handleAppendData()" >Append List</button>
             <img src="Images/refresh.png" alt="Refresh Icon" class="refreshIcon" id="refreshIcon"></img>
             <h4 id="totalEntries">Total Entries: 0</h4>
         </h1>
+        </div>
+        <div class="table-container">
         <table id="student-table">
             <thead>
                 <tr>
@@ -27,6 +30,7 @@
                 <!-- For dynamic contents -->
             </tbody>
         </table>
+        </div>
         <img src="Images/NoData.jpg" alt="No Data" class="no-Data">
         <img src="Images/loading.gif" alt="Loading" class="loadingGif" id="loadingGif"></img>
     </div>

@@ -5,24 +5,24 @@ body {
 }
 
 .container {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  min-height:535px;
+  margin: 1rem;
+  padding: 1rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 th,
 td {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 0.0625rem solid #ddd;
+  padding: 0.625rem;
   text-align: left;
 }
 
@@ -46,8 +46,8 @@ th {
   color: white;
   background-color: red;
   float: right;
-  width: 150px;
-  height: 30px;
+  width: 9.375rem;
+  height: 1.875rem;
 }
 
 .no-Data {
@@ -55,22 +55,23 @@ th {
   height: 250px;
   margin: 0 auto;
   display: none;
+  padding: 63.5px;
 }
 
 .appendListButton {
   color: white;
   background-color: red;
   float: right;
-  width: 150px;
-  height: 30px;
+  width: 9.375rem;
+  height: 1.875rem;
   margin-right: 10px;
 }
 
 .refreshIcon {
   float: right;
   margin-right: 10px;
-  height: 30px;
-  width: 30px;
+  height: 1.875rem;
+  width: 1.875rem;
 }
 
 @keyframes spin {
@@ -88,5 +89,27 @@ th {
   height: 50px;
   margin: 0 auto;
   display: none;
-  padding: 100px;
+  padding: 163.5px;
+}
+
+.table-container {
+  max-height: 415px; 
+  overflow-y: auto; 
+  border: 1px solid #ccc; 
+}
+
+#student-table thead {
+  background-color: #f1f1f1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+h1 button {
+  margin-right: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
