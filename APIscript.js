@@ -120,6 +120,10 @@ function handleClearList() {
 
 // Handle AppendData button click
 function handleAppendData() {
+  // Start the rotation animation
+  const refreshIcon = document.getElementById("refreshIcon");
+  refreshIcon.style.animation = "spin 2s linear infinite"; // Adjust the duration and timing function as needed
+
   fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
     .then((response) => response.json())
     .then((newData) => {
@@ -127,6 +131,14 @@ function handleAppendData() {
       students = students.concat(newData);
       localStorage.setItem("students", JSON.stringify(students));
       displayStudents(students);
+
+      // Stop the rotation animation once data is appended
+      refreshIcon.style.animation = "none";
     })
-    .catch((error) => console.error("Error appending data:", error));
+    .catch((error) => {
+      console.error("Error appending data:", error);
+      // Stop the rotation animation on error as well
+      refreshIcon.style.animation = "none";
+    });
 }
+
