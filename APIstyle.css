@@ -51,8 +51,8 @@ th {
 }
 
 .no-Data {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   margin: 0 auto;
   display: none;
 }
@@ -84,8 +84,9 @@ th {
 
 .loadingGif {
   display: none;
-  width: 300px;
-  height: 300px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto;
   display: none;
+  padding: 100px;
 }
