@@ -1,16 +1,31 @@
-const studentsData = localStorage.getItem("students");
-if (studentsData) {
-  students = JSON.parse(studentsData);
-  displayStudents(students);
-} else {
-  fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
-    .then((response) => response.json())
-    .then((data) => {
-      localStorage.setItem("students", JSON.stringify(data));
-      displayStudents(data);
-    })
-    .catch((error) => console.error("Error fetching data:", error));
-}
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingGif = document.getElementById("loadingGif");
+  loadingGif.style.display = "block";
+
+  const studentsData = localStorage.getItem("students");
+  if (studentsData) {
+    students = JSON.parse(studentsData);
+    displayStudents(students);
+
+    // Hide loading GIF once data is loaded
+    loadingGif.style.display = "none";
+  } else {
+    fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem("students", JSON.stringify(data));
+        displayStudents(data);
+
+        // Hide loading GIF once data is loaded
+        loadingGif.style.display = "none";
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        // Hide loading GIF in case of an error
+        loadingGif.style.display = "none";
+      });
+  }
+});
 
 // Display students in the table
 function displayStudents(students) {
