@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
     students = JSON.parse(studentsData);
     displayStudents(students);
 
-    // Hide loading GIF once data is loaded
     loadingGif.style.display = "none";
   } else {
     fetch("https://my-json-server.typicode.com/SUBASHPALVEL/SampleDB/students")
@@ -15,13 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         localStorage.setItem("students", JSON.stringify(data));
         displayStudents(data);
-
-        // Hide loading GIF once data is loaded
         loadingGif.style.display = "none";
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        // Hide loading GIF in case of an error
         loadingGif.style.display = "none";
       });
   }
@@ -156,4 +152,3 @@ function handleAppendData() {
       refreshIcon.style.animation = "none";
     });
 }
-
