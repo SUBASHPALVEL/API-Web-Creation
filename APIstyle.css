@@ -42,12 +42,22 @@ th {
   text-decoration: underline;
 }
 
-.clearListButton {
+.logoutButton {
   color: white;
   background-color: red;
   float: right;
   width: 9.375rem;
   height: 1.875rem;
+}
+
+.clearListButton,
+.appendListButton {
+  color: white;
+  background-color: red;
+  float: right;
+  width: 9.375rem;
+  height: 1.875rem;
+  margin-right: 10px;
 }
 
 .no-Data {
@@ -58,14 +68,7 @@ th {
   padding: 63.5px;
 }
 
-.appendListButton {
-  color: white;
-  background-color: red;
-  float: right;
-  width: 9.375rem;
-  height: 1.875rem;
-  margin-right: 10px;
-}
+
 
 .refreshIcon {
   float: right;
