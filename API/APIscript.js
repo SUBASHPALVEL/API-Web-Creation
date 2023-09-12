@@ -155,4 +155,5 @@ function handleAppendData() {
 // Handle logout button click
 function handleLogout() {
   window.location.href = "../Login/Loginmain.html";
+  localStorage.clear();
 }
