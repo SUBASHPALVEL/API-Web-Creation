@@ -141,3 +141,7 @@ function resetForm() {
   emailInputValue = undefined;
   passwordInputValue = undefined;
 }
+
+function redirectToURL() {
+  window.location.href = 'userTasks';
+}
